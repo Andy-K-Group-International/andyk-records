@@ -244,3 +244,26 @@ body {
 @media (max-width: 640px) {
   .release-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ── Platform / Listen buttons ───────────────── */
+
+.platform-btn {
+  font-family: var(--font-mono-stack);
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 10px 20px;
+  border-radius: 0;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.platform-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}

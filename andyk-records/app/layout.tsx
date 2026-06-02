@@ -28,11 +28,15 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "Andy'K Records | Official Release Identity of DJ Andy'K",
   description:
-    "Andy'K Records is the official music label and release identity for DJ Andy'K — original electronic music, trance, progressive sound, albums and collaborations.",
+    "Andy'K Records is the official music label and release identity for DJ Andy'K projects, original electronic music, albums, collaborations, and selected creative releases.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Andy'K Records | Official Release Identity of DJ Andy'K",
     description:
-      "Andy'K Records is the official music label and release identity for DJ Andy'K — original electronic music, trance, progressive sound, albums and collaborations.",
+      "Original electronic music, emotional trance, progressive sound and selected creative releases from the DJ Andy'K Official ecosystem.",
     url: "https://records.djandykofficial.com",
     siteName: "Andy'K Records",
     type: "website",
@@ -49,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Andy'K Records | Official Release Identity of DJ Andy'K",
     description:
-      "Andy'K Records is the official music label and release identity for DJ Andy'K — original electronic music, trance, progressive sound, albums and collaborations.",
+      "Original electronic music, emotional trance, progressive sound and selected creative releases from the DJ Andy'K Official ecosystem.",
     images: ["/logo.png"],
   },
   metadataBase: new URL("https://records.djandykofficial.com"),

@@ -388,6 +388,78 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SELECTED RELEASES ──────────────────────────── */}
+      <section style={{ background: "#0a0a0a", padding: "7rem 2rem" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ marginBottom: "3.5rem", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+            <p style={monoLabel}>Selected Releases</p>
+            <h2 style={sectionHeading}>
+              Release <em style={accentEm}>Catalogue</em>
+            </h2>
+            <p style={{ color: "#a3a3a3", fontSize: "1.05rem", lineHeight: 1.8, maxWidth: 580 }}>
+              Original tracks, albums and selected DJ Andy&apos;K releases will be listed here.
+            </p>
+          </div>
+
+          <div
+            style={{
+              border: "1px solid rgba(255,255,255,0.08)",
+              padding: 32,
+              maxWidth: 400,
+            }}
+          >
+            <p
+              style={{
+                fontFamily: "var(--font-mono-stack)",
+                fontSize: 10,
+                letterSpacing: "0.16em",
+                color: "#525252",
+                textTransform: "uppercase",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Coming Soon
+            </p>
+            <p style={{ color: "#525252", fontSize: "0.875rem", lineHeight: 1.7 }}>
+              Release catalogue coming soon.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── LISTEN & FOLLOW ─────────────────────────────── */}
+      <section style={{ background: "#111111", padding: "7rem 2rem" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ marginBottom: "3.5rem", display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+            <p style={monoLabel}>Listen &amp; Follow</p>
+            <h2 style={sectionHeading}>
+              DJ Andy&apos;K on <em style={accentEm}>all platforms</em>
+            </h2>
+          </div>
+
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+            {[
+              { label: "Spotify", href: "https://open.spotify.com/artist/3JhFGt6jRQvnYgvhWMQHUU" },
+              { label: "SoundCloud", href: "https://soundcloud.com/djandykofficial" },
+              { label: "YouTube", href: "https://www.youtube.com/channel/UCrlcaZ24IreLG97tXQ4EMqA" },
+              { label: "Apple Music", href: "https://music.apple.com/gb/artist/dj-andyk/1835064975" },
+              { label: "DJ Andy’K Official", href: "https://www.djandykofficial.com/" },
+              { label: "Andy’K Music Lab", href: "https://lab.djandykofficial.com/" },
+            ].map((p) => (
+              <a
+                key={p.label}
+                className="platform-btn"
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {p.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── FOOTER ─────────────────────────────────────── */}
       <footer
         style={{
@@ -453,6 +525,35 @@ export default function Home() {
             <a className="legal-link" href="/copyright">Copyright</a>
             <a className="legal-link" href="/company-information">Company Information</a>
           </div>
+
+          <p style={{ color: "#a3a3a3", fontSize: "0.8rem", lineHeight: 1.7 }}>
+            For release, publishing or collaboration inquiries:{" "}
+            <a
+              href="mailto:ceo@andykgroup.com"
+              style={{ color: "#a3a3a3", textDecoration: "underline", textUnderlineOffset: 2 }}
+            >
+              ceo@andykgroup.com
+            </a>
+          </p>
+
+          <p
+            style={{
+              fontFamily: "var(--font-mono-stack)",
+              color: "#525252",
+              fontSize: 10,
+              letterSpacing: "0.08em",
+            }}
+          >
+            Part of the Andy&apos;K Ecosystem &mdash;{" "}
+            <a
+              href="https://www.andykgroup.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#525252", textDecoration: "underline", textUnderlineOffset: 2 }}
+            >
+              andykgroup.com
+            </a>
+          </p>
 
           <p
             style={{
