@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, IBM_Plex_Mono, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -64,7 +65,10 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${ibmPlexMono.variable} ${playfairDisplay.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
