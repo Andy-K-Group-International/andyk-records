@@ -201,3 +201,12 @@ body {
   transition: color 0.2s;
 }
 .footer-link:hover { color: #a3a3a3; }
+
+.legal-link {
+  font-family: var(--font-mono-stack);
+  font-size: 11px;
+  color: #525252;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.legal-link:hover { color: #a3a3a3; }

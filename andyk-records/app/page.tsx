@@ -451,6 +451,23 @@ export default function Home() {
             </a>
           </div>
 
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 24,
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+              paddingTop: "1.5rem",
+            }}
+          >
+            <a className="legal-link" href="/privacy-policy">Privacy Policy</a>
+            <a className="legal-link" href="/cookies-policy">Cookies Policy</a>
+            <a className="legal-link" href="/terms-and-conditions">Terms &amp; Conditions</a>
+            <a className="legal-link" href="/disclaimer">Disclaimer</a>
+            <a className="legal-link" href="/copyright">Copyright</a>
+            <a className="legal-link" href="/company-information">Company Information</a>
+          </div>
+
           <p
             style={{
               fontFamily: "var(--font-mono-stack)",
@@ -458,8 +475,6 @@ export default function Home() {
               fontSize: 10,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              borderTop: "1px solid rgba(255,255,255,0.06)",
-              paddingTop: "1.5rem",
             }}
           >
             &#8471; &amp; &copy; 2026 ANDY&apos;K GROUP INTERNATIONAL LTD
