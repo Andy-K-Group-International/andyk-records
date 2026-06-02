@@ -17,7 +17,7 @@ const RELEASE_ITEMS = [
   {
     num: "01",
     title: "Original Electronic Music",
-    desc: "Tracks, albums and singles produced under the DJ Andy’K name",
+    desc: "Tracks, albums and singles produced under the DJ Andy'K name",
   },
   {
     num: "02",
@@ -101,7 +101,7 @@ export default function Home() {
             src="/logo.png"
             width={120}
             height={50}
-            alt="Andy’K Records"
+            alt="Andy'K Records"
             style={{ objectFit: "contain", objectPosition: "left center", filter: "invert(1) brightness(1.2)" }}
             priority
           />
@@ -135,22 +135,22 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "center",
           position: "relative",
-          padding: "6rem 2rem 9rem",
+          padding: "0 2rem 9rem",
           textAlign: "center",
-          gap: "1.75rem",
           background: "#0a0a0a",
         }}
       >
         <Image
           src="/logo.png"
-          width={280}
-          height={280}
-          alt="Andy’K Records"
-          style={{ objectFit: "contain", filter: "invert(1) brightness(1.2)" }}
+          className="hero-logo"
+          width={320}
+          height={320}
+          alt="Andy'K Records"
+          style={{ filter: "invert(1) brightness(1.1)", display: "block", margin: "80px auto 40px" }}
           priority
         />
 
-        <p style={monoLabel}>
+        <p style={{ ...monoLabel, marginBottom: "2rem" }}>
           The Official Release Identity of DJ Andy&apos;K
         </p>
 
@@ -158,11 +158,10 @@ export default function Home() {
           style={{
             fontFamily: "var(--font-display-stack)",
             fontWeight: 800,
-            fontSize: "clamp(3.5rem, 12vw, 9rem)",
+            fontSize: "clamp(3rem, 8vw, 6rem)",
             lineHeight: 1,
             letterSpacing: "-0.03em",
             color: "#ffffff",
-            margin: "0.25rem 0",
           }}
         >
           ANDY&apos;K RECORDS
@@ -176,20 +175,13 @@ export default function Home() {
             color: "#a3a3a3",
             maxWidth: 540,
             lineHeight: 1.6,
+            marginTop: "2rem",
           }}
         >
           Original electronic music. Emotional trance. Progressive sound.
         </p>
 
-        <div
-          style={{
-            display: "flex",
-            gap: "1rem",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "0.5rem",
-          }}
-        >
+        <div className="hero-ctas" style={{ marginTop: "2.5rem" }}>
           <a
             className="btn-primary"
             href="https://www.djandykofficial.com/"
@@ -242,10 +234,10 @@ export default function Home() {
       </section>
 
       {/* ── ABOUT ──────────────────────────────────────── */}
-      <section style={{ background: "#111111", padding: "7rem 2rem" }}>
+      <section style={{ background: "#111111", padding: "100px 2rem" }}>
         <div
           style={{
-            maxWidth: 1200,
+            maxWidth: 680,
             margin: "0 auto",
             display: "flex",
             gap: "3rem",
@@ -266,7 +258,7 @@ export default function Home() {
               A Music Label Identity for Emotional{" "}
               <em style={accentEm}>Electronic Sound</em>
             </h2>
-            <p style={{ color: "#a3a3a3", fontSize: "1.05rem", lineHeight: 1.8, maxWidth: 680 }}>
+            <p style={{ color: "#a3a3a3", fontSize: 17, lineHeight: 1.8 }}>
               Andy&apos;K Records exists as the release and label identity behind DJ Andy&apos;K
               music projects. It supports original tracks, albums, visual concepts, selected
               collaborations, and publishing references connected to the DJ Andy&apos;K universe.
@@ -289,29 +281,23 @@ export default function Home() {
           </div>
 
           <div
+            className="release-grid"
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: "2.5rem 3rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gap: "1.5rem",
             }}
           >
             {RELEASE_ITEMS.map((item) => (
-              <div
-                key={item.num}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.75rem",
-                  paddingBottom: "2.5rem",
-                  borderBottom: "1px solid rgba(255,255,255,0.08)",
-                }}
-              >
+              <div className="release-card" key={item.num}>
                 <span
                   style={{
                     fontFamily: "var(--font-mono-stack)",
                     fontSize: 11,
                     letterSpacing: "0.14em",
                     color: "#525252",
+                    display: "block",
+                    marginBottom: 12,
                   }}
                 >
                   {item.num}
@@ -320,14 +306,15 @@ export default function Home() {
                   style={{
                     fontFamily: "var(--font-display-stack)",
                     fontWeight: 800,
-                    fontSize: "1.05rem",
+                    fontSize: 18,
                     letterSpacing: "-0.01em",
                     color: "#ffffff",
+                    marginBottom: 8,
                   }}
                 >
                   {item.title}
                 </h3>
-                <p style={{ color: "#a3a3a3", fontSize: "0.9rem", lineHeight: 1.7 }}>
+                <p style={{ color: "#a3a3a3", fontSize: 14, lineHeight: 1.6 }}>
                   {item.desc}
                 </p>
               </div>
@@ -356,8 +343,6 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               gap: 0,
-              borderLeft: "1px solid rgba(255,255,255,0.1)",
-              paddingLeft: "2rem",
               maxWidth: 480,
             }}
           >
@@ -369,6 +354,7 @@ export default function Home() {
                 color: "#525252",
                 textTransform: "uppercase",
                 paddingBottom: "1rem",
+                paddingLeft: "2rem",
               }}
             >
               DJ ANDY&apos;K OFFICIAL
@@ -387,7 +373,7 @@ export default function Home() {
               className="ecosystem-link ecosystem-link--current"
               href="https://records.djandykofficial.com"
             >
-              <span>&rarr;</span> ANDY&apos;K RECORDS <span style={{ color: "#525252", fontSize: 11 }}>&larr;</span>
+              <span>&rarr;</span> ANDY&apos;K RECORDS
             </a>
 
             <a
@@ -423,7 +409,7 @@ export default function Home() {
             src="/logo.png"
             width={80}
             height={80}
-            alt="Andy’K Records"
+            alt="Andy'K Records"
             style={{ objectFit: "contain", objectPosition: "left center", filter: "invert(1) brightness(1.2)" }}
           />
 

@@ -141,13 +141,14 @@ body {
   font-family: var(--font-mono-stack);
   display: inline-flex;
   align-items: center;
-  padding: 14px 28px;
+  padding: 14px 32px;
   background: #ffffff;
   color: #000000;
   font-size: 12px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-decoration: none;
   font-weight: 500;
+  border-radius: 0;
   transition: opacity 0.2s;
 }
 .btn-primary:hover { opacity: 0.82; }
@@ -156,20 +157,18 @@ body {
   font-family: var(--font-mono-stack);
   display: inline-flex;
   align-items: center;
-  padding: 14px 28px;
+  padding: 14px 32px;
   background: transparent;
   color: #ffffff;
   font-size: 12px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-decoration: none;
   font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  transition: border-color 0.2s, opacity 0.2s;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  transition: opacity 0.2s;
 }
-.btn-secondary:hover {
-  border-color: #ffffff;
-  opacity: 0.82;
-}
+.btn-secondary:hover { opacity: 0.72; }
 
 .ecosystem-link {
   font-family: var(--font-mono-stack);
@@ -180,14 +179,17 @@ body {
   letter-spacing: 0.12em;
   color: #525252;
   text-decoration: none;
-  padding: 0.6rem 0;
+  padding: 0.6rem 0 0.6rem 2rem;
   transition: color 0.2s;
 }
+.ecosystem-link span { color: #525252; }
 .ecosystem-link:hover { color: #a3a3a3; }
 
 .ecosystem-link--current {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 700;
+  border-left: 2px solid #ffffff;
+  padding-left: 16px;
 }
 .ecosystem-link--current:hover { color: #ffffff; }
 
@@ -210,3 +212,35 @@ body {
   transition: color 0.2s;
 }
 .legal-link:hover { color: #a3a3a3; }
+
+/* ── Hero responsive ─────────────────────────── */
+
+.hero-logo { width: 320px !important; height: 320px !important; }
+@media (max-width: 640px) {
+  .hero-logo { width: 200px !important; height: 200px !important; }
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  .hero-ctas { flex-direction: column; align-items: center; }
+}
+
+/* ── Release cards ────────────────────────────── */
+
+.release-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: border-color 0.2s;
+}
+.release-card:hover { border-color: rgba(255,255,255,0.3); }
+
+@media (max-width: 640px) {
+  .release-grid { grid-template-columns: 1fr !important; }
+}
