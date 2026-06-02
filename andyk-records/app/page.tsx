@@ -102,7 +102,7 @@ export default function Home() {
             width={120}
             height={50}
             alt="Andy’K Records"
-            style={{ objectFit: "contain", objectPosition: "left center" }}
+            style={{ objectFit: "contain", objectPosition: "left center", filter: "invert(1) brightness(1.2)" }}
             priority
           />
           <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
@@ -146,7 +146,7 @@ export default function Home() {
           width={280}
           height={280}
           alt="Andy’K Records"
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "contain", filter: "invert(1) brightness(1.2)" }}
           priority
         />
 
@@ -424,7 +424,7 @@ export default function Home() {
             width={80}
             height={80}
             alt="Andy’K Records"
-            style={{ objectFit: "contain", objectPosition: "left center" }}
+            style={{ objectFit: "contain", objectPosition: "left center", filter: "invert(1) brightness(1.2)" }}
           />
 
           <p style={{ color: "#525252", fontSize: "0.875rem", lineHeight: 1.7 }}>
